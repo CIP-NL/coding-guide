@@ -1,6 +1,0 @@
-[submodule "BlockStart-docs/gohugo-theme-ananke"]
-	path = BlockStart-docs/gohugo-theme-ananke
-	url = https://github.com/budparr/gohugo-theme-ananke.git
-[submodule "BlockStart-docs/themes/ananke"]
-	path = BlockStart-docs/themes/ananke
-	url = https://github.com/budparr/gohugo-theme-ananke.git
