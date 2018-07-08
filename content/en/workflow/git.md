@@ -11,10 +11,11 @@ menu:
   docs:
     parent: "workflow"
     weight: 10
+    identifier: workflow-git
 weight: 10
 sections_weight: 10
 draft: false
-aliases: [/git/,/vcs/]
+aliases: [/git/]
 toc: true
 ---
 
@@ -174,6 +175,56 @@ git merge upstream/master
 git checkout newfeature
 git rebase master
 ```
+
+## hooks
+Git allows for some [hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to be executed. A very convenient one is the pre-commit hook, which is executed before each commit.
+
+#### example
+```bash
+#!/usr/bin/env bash
+
+echo "running pre-commit hook"
+
+echo "go test -race..."
+go test -race
+
+echo "golangci-lint run..."
+golangci-lint run
+
+echo "gofmting..."
+
+gofiles=$(git diff --cached --name-only --diff-filter=ACM | grep '\.go$')
+[ -z "$gofiles" ] && exit 0
+
+unformatted=$(gofmt -l $gofiles)
+[ -z "$unformatted" ] && exit 0
+
+# Some files are not gofmt'd. Print message and fail.
+
+echo >&2 "Go files must be formatted with gofmt. Please run:"
+for fn in $unformatted; do
+	echo >&2 "  gofmt -w $PWD/$fn"
+done
+
+exit 1
+```
+
+This hook will test, lint and format before each commit. No more forgetting gofmt!
+
+### Sharing hooks
+The .git repository is normally not committed. A way around this is to create a .githooks directory and adding the hooks there, and then simlinking/pointing git to that directory.
+
+Put the setup for your hooks in the init method of a Makefile:
+
+#### example
+```makefile
+ Init project specific settings needed for development
+init:
+	git config core.hooksPath .githooks
+	# Incase an old version of git is installed
+	find .git/hooks -type l -exec rm {} \; && find .githooks -type f -exec ln -sf ../../{} .git/hooks/ \;
+```
+
 
 ## Links
 
