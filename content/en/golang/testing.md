@@ -81,4 +81,9 @@ func test_API(){
 Make sure that your tests pass within 2 seconds. If running tests takes too long, you'll get 
 annoyed and not run them often enough.
 
+## parallelization
+Normally `go test` will run tests sequentially (although the order is not deterministic). Most
+unit tests may be run in parallel. To mark them as parallel, simply add the line `t.Parallel()` as the first line of the test. The testrunner will determine if it is more optimal to run
+the test in parallel. It is not guaranteed to do so.
+
 
