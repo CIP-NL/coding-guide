@@ -140,6 +140,12 @@ anchor = "smart"
   identifier = "naming"
   url = "/naming/"
 
+[[menu.docs]]
+  name = "Literature"
+  weight = 40
+  identifier = "literature"
+  url = "/literature/"
+
 ######## QUICKLINKS
 
 [[menu.quicklinks]]
