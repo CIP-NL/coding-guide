@@ -129,10 +129,16 @@ anchor = "smart"
   url = "/golang/"
 
 [[menu.docs]]
-name = "Python"
-weight = 35
-identifier = "python"
-url = "/python/"
+  name = "Python"
+  weight = 35
+  identifier = "python"
+  url = "/python/"
+
+[[menu.docs]]
+  name = "Naming"
+  weight = 30
+  identifier = "naming"
+  url = "/naming/"
 
 ######## QUICKLINKS
 
