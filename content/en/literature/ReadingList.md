@@ -14,7 +14,7 @@ menu:
     weight: 40
 weight: 40
 sections_weight: 40
-aliases: [/golang/]
+aliases: [/literature/]
 toc: false
 ---
 

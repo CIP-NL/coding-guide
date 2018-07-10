@@ -1,7 +1,7 @@
 ---
-title: Literature List
-linktitle: Literature List
-description: Literature List
+title: Literature Index
+linktitle: Literature Index
+description: Literature Index
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2017-02-01
