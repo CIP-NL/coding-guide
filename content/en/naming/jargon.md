@@ -19,4 +19,4 @@ toc: false
 ---
 
 ## A list of different commonly used jargon
-* Marketdata: The generic term for items such as "Ticker", "Depth", "Marketcap"
+* Data type: The generic term for data types such as "Ticker", "Depth", "Marketcap"
