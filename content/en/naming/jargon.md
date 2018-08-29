@@ -20,3 +20,11 @@ toc: false
 
 ## A list of different commonly used jargon
 * Data type: The generic term for data types such as "Ticker", "Depth", "Marketcap"
+
+## Order book definitions
+* Ticker: Shitcoins.
+* Quote: The currency that is trades against. BTC, USDT, ETH for example.
+* Market: A ticker/quote combination.
+* Pair: A combination of exchange and market. Uniquely identifies a sub order book.
+* Sub order book: An order book containing only one market on one exchange.
+* Order book: All sub order books of all markets on all exchanges combined.
