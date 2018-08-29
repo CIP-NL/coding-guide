@@ -23,7 +23,7 @@ toc: false
 
 ## Order book definitions
 * Ticker: Shitcoins.
-* Quote: The currency that is trades against. BTC, USDT, ETH for example.
+* Quote: The currency that is traded against. BTC, USDT, ETH for example.
 * Market: A ticker/quote combination.
 * Pair: A combination of exchange and market. Uniquely identifies a sub order book.
 * Sub order book: An order book containing only one market on one exchange.
