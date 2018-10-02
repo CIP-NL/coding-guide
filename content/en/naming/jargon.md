@@ -27,5 +27,5 @@ toc: false
 * Ticker: Either a base or quote.
 * Market: A ticker/quote combination.
 * Pair: A combination of exchange and market. Uniquely identifies a sub order book.
-* Sub order book: An order book containing only one market on one exchange.
-* Order book: All sub order books of all markets on all exchanges combined.
+* Order book: An order book containing only one market on one exchange.
+* Full Order book: All sub order books of all markets on all exchanges combined.
